@@ -1,0 +1,49 @@
+package student.grade.calculator;
+
+import java.util.Scanner;
+
+public class StudentGradeCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the number of subjects: ");
+        int numberOfSubjects = scanner.nextInt();
+
+        int[] marks = new int[numberOfSubjects];
+
+        
+        int total = 0; 
+        for (int i = 0; i < numberOfSubjects; i++) {
+            System.out.print("Enter Marks of Subject " + (i + 1) + ": ");
+            marks[i] = scanner.nextInt();
+            total += marks[i]; 
+        }
+
+        scanner.close();
+
+        
+        double avg = (double) total / numberOfSubjects;
+
+       
+        String grade;
+        if (avg >= 80) {
+            grade = "A";
+        }  if (avg >= 60) {
+            grade = "B";
+        }  if (avg >= 40) {
+            grade = "C";
+        } if (avg >= 30)  {
+            grade = "D";
+        } else {
+            grade = "F"; 
+         
+        }
+        
+        
+        System.out.println("Total marks: " + total + "/" + (numberOfSubjects * 100));
+        System.out.println("Average percentage: " + avg);
+        System.out.println("Grade: " + grade);
+    }
+}
+
