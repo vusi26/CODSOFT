@@ -29,11 +29,11 @@ public class StudentGradeCalculator {
         String grade;
         if (avg >= 80) {
             grade = "A";
-        }  if (avg >= 60) {
+        }else if (avg >= 60) {
             grade = "B";
-        }  if (avg >= 40) {
+        }else if (avg >= 40) {
             grade = "C";
-        } if (avg >= 30)  {
+        }else if (avg >= 30)  {
             grade = "D";
         } else {
             grade = "F"; 
